@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 에이전트 시대, 개발자의 새로운 역할</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Navigation -->
+        <nav class="slide-nav">
+            <button class="nav-btn prev" onclick="changeSlide(-1)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <div class="slide-counter">
+                <span id="current-slide">1</span> / <span id="total-slides">14</span>
+            </div>
+            <button class="nav-btn next" onclick="changeSlide(1)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <!-- Slides -->
+        <div class="slides-wrapper">
+            <!-- Slide 1: Title -->
+            <section class="slide active" id="slide-1">
+                <div class="slide-content center-content">
+                    <h1 class="main-title">AI 에이전트 시대,<br>개발자의 새로운 역할</h1>
+                    <p class="subtitle">2025년 AI 기술과 개발 패러다임의 전환</p>
+                    <div class="slide-meta">
+                        <span class="date">2025</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Overview -->
+            <section class="slide" id="slide-2">
+                <div class="slide-content">
+                    <h2 class="slide-title">개요: AI가 변화시키는 개발 패러다임</h2>
+                    <div class="content-grid">
+                        <div class="highlight-box">
+                            <p class="lead-text">2025년, AI 기술의 급속한 발전은 소프트웨어 개발의 근본적인 패러다임 전환을 가져왔습니다.</p>
+                        </div>
+                        <div class="evolution-visual">
+                            <div class="evolution-item">
+                                <div class="evolution-icon">👨‍💻</div>
+                                <p>코드 작성자</p>
+                            </div>
+                            <div class="evolution-arrow">→</div>
+                            <div class="evolution-item highlight">
+                                <div class="evolution-icon">🎯</div>
+                                <p><strong>AI 오케스트레이터</strong></p>
+                            </div>
+                        </div>
+                        <blockquote class="quote">
+                            "엔지니어의 역할은 수동 작업에서 AI 오케스트레이터로 크게 변화할 것"
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: AI Models -->
+            <section class="slide" id="slide-3">
+                <div class="slide-content">
+                    <h2 class="slide-title">2025년 최신 AI 모델의 혁신적 발전</h2>
+                    <div class="models-grid">
+                        <div class="model-card gemini">
+                            <h3>Gemini 2.5 Pro</h3>
+                            <ul class="feature-list">
+                                <li><strong>Deep Think 모드</strong>: 고도화된 추론 기능</li>
+                                <li><strong>1백만 토큰</strong> 컨텍스트</li>
+                                <li>AIME 2025: <span class="highlight">86.7%</span></li>
+                                <li>SWE-bench: <span class="highlight">63.8%</span></li>
+                            </ul>
+                        </div>
+                        <div class="model-card openai">
+                            <h3>OpenAI o3-pro</h3>
+                            <ul class="feature-list">
+                                <li><strong>고급 추론 모델</strong></li>
+                                <li>웹 검색, 파일 분석, Python 실행</li>
+                                <li>수학 문제 해결 최고 성능</li>
+                                <li>API: $20/백만 토큰 (입력)</li>
+                            </ul>
+                        </div>
+                        <div class="model-card claude">
+                            <h3>Claude 4 Opus</h3>
+                            <ul class="feature-list">
+                                <li>SWE-bench: <span class="highlight">72.5%</span> (최고)</li>
+                                <li>Terminal-bench: <span class="highlight">43.2%</span></li>
+                                <li><strong>32K 출력 토큰</strong></li>
+                                <li>하이브리드 추론 모드</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: AI Development Trends -->
+            <section class="slide" id="slide-4">
+                <div class="slide-content">
+                    <h2 class="slide-title">AI 기술의 주요 발전 방향</h2>
+                    <div class="trends-container">
+                        <div class="trend-item">
+                            <div class="trend-icon">🧠</div>
+                            <h3>추론 모델의 부상</h3>
+                            <p>Chain-of-thought 추론으로 복잡한 문제 해결</p>
+                            <p class="stat">GPT-3.5 성능: <span class="before">48.1%</span> → <span class="after">95.1%</span></p>
+                        </div>
+                        <div class="trend-item">
+                            <div class="trend-icon">📚</div>
+                            <h3>컨텍스트 윈도우 확장</h3>
+                            <p>Gemini 2.5 Pro: <strong>2백만 토큰</strong></p>
+                            <p>전체 코드베이스 한 번에 처리 가능</p>
+                        </div>
+                        <div class="trend-item">
+                            <div class="trend-icon">🤖</div>
+                            <h3>에이전틱 AI 실용화</h3>
+                            <p>Claude Code, Cursor, GitHub Copilot</p>
+                            <p class="highlight-text">2025년은 "에이전트의 해"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Code Generation Benchmarks -->
+            <section class="slide" id="slide-5">
+                <div class="slide-content">
+                    <h2 class="slide-title">코드 생성 능력의 비약적 발전</h2>
+                    <div class="benchmark-container">
+                        <h3>SWE-bench 성과</h3>
+                        <div class="benchmark-chart">
+                            <div class="benchmark-item">
+                                <div class="model-name">Claude 4 Sonnet</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-fill" style="width: 72.7%"></div>
+                                    <span class="percentage">72.7%</span>
+                                </div>
+                            </div>
+                            <div class="benchmark-item">
+                                <div class="model-name">Claude 4 Opus</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-fill" style="width: 72.5%"></div>
+                                    <span class="percentage">72.5%</span>
+                                </div>
+                            </div>
+                            <div class="benchmark-item">
+                                <div class="model-name">OpenAI o3</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-fill" style="width: 69.1%"></div>
+                                    <span class="percentage">69.1%</span>
+                                </div>
+                            </div>
+                            <div class="benchmark-item">
+                                <div class="model-name">Gemini 2.5 Pro</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-fill" style="width: 63.2%"></div>
+                                    <span class="percentage">63.2%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-number">74%</div>
+                                <div class="stat-label">개발자가 AI 코드의 환각 경험</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">82%</div>
+                                <div class="stat-label">2026년까지 AI 에이전트 통합 계획</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: AI Frameworks -->
+            <section class="slide" id="slide-6">
+                <div class="slide-content">
+                    <h2 class="slide-title">AI Agent 프레임워크: 개발자의 새로운 무기</h2>
+                    <div class="frameworks-comparison">
+                        <div class="framework-card">
+                            <h3>LangChain</h3>
+                            <p class="framework-desc">통합형 AI 애플리케이션 프레임워크</p>
+                            <ul>
+                                <li>모듈화된 아키텍처</li>
+                                <li>LangGraph: 그래프 기반 상태 관리</li>
+                                <li>채택률 <span class="highlight">43% 증가</span></li>
+                                <li>평균 단계: 2.8 → <span class="highlight">7.7</span></li>
+                            </ul>
+                        </div>
+                        <div class="framework-card">
+                            <h3>CrewAI</h3>
+                            <p class="framework-desc">역할 기반 멀티 에이전트 시스템</p>
+                            <ul>
+                                <li>LangGraph 대비 <span class="highlight">5.76배 빠른</span> 실행</li>
+                                <li>100,000+ 인증 개발자</li>
+                                <li>역할 기반 협업</li>
+                                <li>Enterprise Suite 지원</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pattern-showcase">
+                        <h4>ReAct Pattern</h4>
+                        <div class="pattern-flow">
+                            <span>Thought</span> → <span>Action</span> → <span>Observation</span> → <span>Final Answer</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: AI Development Tools -->
+            <section class="slide" id="slide-7">
+                <div class="slide-content">
+                    <h2 class="slide-title">AI 네이티브 개발 환경: 생산성의 혁명</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <h3>Cursor</h3>
+                                <span class="price">$20/월</span>
+                            </div>
+                            <ul>
+                                <li>AI-first 설계의 선두주자</li>
+                                <li>Composer & Agent 모드</li>
+                                <li>다중 AI 모델 지원</li>
+                            </ul>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <h3>Windsurf</h3>
+                                <span class="price">$15/월</span>
+                            </div>
+                            <ul>
+                                <li>자동 컨텍스트 관리</li>
+                                <li>Cascade Flow 시스템</li>
+                                <li>실시간 미리보기</li>
+                            </ul>
+                        </div>
+                        <div class="tool-card featured">
+                            <div class="tool-header">
+                                <h3>Claude Code</h3>
+                                <span class="badge">최강</span>
+                            </div>
+                            <ul>
+                                <li>Claude 4 Opus/Sonnet 기반</li>
+                                <li>14가지 내장 도구</li>
+                                <li>MCP 연동 기능</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="productivity-stats">
+                        <h4>생산성 향상 통계</h4>
+                        <div class="stat-row">
+                            <div class="stat-item">
+                                <div class="stat-value">92%</div>
+                                <div class="stat-desc">더 빠른 코딩</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">126%</div>
+                                <div class="stat-desc">생산성 향상</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">20-45%</div>
+                                <div class="stat-desc">엔지니어링 생산성</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Real-world Applications -->
+            <section class="slide" id="slide-8">
+                <div class="slide-content">
+                    <h2 class="slide-title">AI 에이전트 활용 개발 사례</h2>
+                    <div class="case-studies">
+                        <div class="case-study">
+                            <h3>디자인 → 앱 자동 구축</h3>
+                            <div class="case-content">
+                                <div class="case-item">
+                                    <h4>Figma to Code</h4>
+                                    <p>개발 시간 <span class="highlight">50-80% 단축</span></p>
+                                    <p>픽셀 완벽 정확도</p>
+                                </div>
+                                <div class="case-item">
+                                    <h4>Screenshot to App</h4>
+                                    <p><span class="highlight">95%+</span> 프로덕션 준비 완료</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-study">
+                            <h3>AI 기술 서적 집필</h3>
+                            <div class="case-content">
+                                <div class="case-item">
+                                    <h4>Spring AI 책</h4>
+                                    <p>Claude Code로 자동 작성</p>
+                                </div>
+                                <div class="case-item">
+                                    <h4>Claude Mastering</h4>
+                                    <p>400페이지, 하루 만에 출판사 4곳 연락</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Developer Evolution -->
+            <section class="slide" id="slide-9">
+                <div class="slide-content">
+                    <h2 class="slide-title">개발자 역할의 진화</h2>
+                    <div class="evolution-grid">
+                        <div class="role-card">
+                            <div class="role-icon">🏗️</div>
+                            <h3>AI 시스템 아키텍트</h3>
+                            <ul>
+                                <li>하이브리드 아키텍처 설계</li>
+                                <li>모듈형 설계</li>
+                                <li>이벤트 기반 아키텍처</li>
+                            </ul>
+                        </div>
+                        <div class="role-card">
+                            <div class="role-icon">✅</div>
+                            <h3>품질 검증 전문가</h3>
+                            <ul>
+                                <li>AI 코드 품질 평가</li>
+                                <li>보안 취약점 분석</li>
+                                <li>Human-in-the-Loop</li>
+                            </ul>
+                        </div>
+                        <div class="role-card">
+                            <div class="role-icon">🎯</div>
+                            <h3>도메인 전문가</h3>
+                            <ul>
+                                <li>문제 정의와 프레이밍</li>
+                                <li>성공 지표 정의</li>
+                                <li>ROI 계산</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Required Skills -->
+            <section class="slide" id="slide-10">
+                <div class="slide-content center-content">
+                    <h2 class="slide-title">우리가 필요한 역량</h2>
+                    <div class="skills-showcase">
+                        <div class="skill-item">
+                            <div class="skill-icon">💪</div>
+                            <h3>주도적</h3>
+                            <p>AI와의 능동적 협업</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⚡</div>
+                            <h3>속도</h3>
+                            <p>빠른 학습과 적응</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🎯</div>
+                            <h3>집요함</h3>
+                            <p>품질과 완성도 추구</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Conclusion -->
+            <section class="slide" id="slide-11">
+                <div class="slide-content">
+                    <h2 class="slide-title">결론: AI와 함께하는 개발의 미래</h2>
+                    <div class="conclusion-content">
+                        <p class="lead-text">AI 에이전트 시대의 개발자는 더 이상 단순한 코드 작성자가 아닙니다.</p>
+                        <div class="key-points">
+                            <h3>성공적인 AI 오케스트레이터가 되기 위한 핵심</h3>
+                            <div class="point-grid">
+                                <div class="point-item">
+                                    <span class="point-number">1</span>
+                                    <h4>기술적 깊이</h4>
+                                    <p>AI 시스템 설계와 에이전트 관리</p>
+                                </div>
+                                <div class="point-item">
+                                    <span class="point-number">2</span>
+                                    <h4>품질 관리</h4>
+                                    <p>AI 출력물 검증과 최적화</p>
+                                </div>
+                                <div class="point-item">
+                                    <span class="point-number">3</span>
+                                    <h4>도메인 전문성</h4>
+                                    <p>비즈니스 맥락에서의 AI 활용</p>
+                                </div>
+                                <div class="point-item">
+                                    <span class="point-number">4</span>
+                                    <h4>지속적 학습</h4>
+                                    <p>빠르게 변화하는 생태계 적응</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Near Future -->
+            <section class="slide" id="slide-12">
+                <div class="slide-content">
+                    <h2 class="slide-title">향후 1년 이내 전망</h2>
+                    <div class="future-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">🚀</div>
+                            <h3>개발 현장의 변화</h3>
+                            <ul>
+                                <li>AI 에이전트 채택률 급상승</li>
+                                <li>Claude Code, Jules 등 안정화 버전 출시</li>
+                                <li>"AI 지원 여부"가 생산성 핵심 요인</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">🏢</div>
+                            <h3>기업 내부 변화</h3>
+                            <ul>
+                                <li>AI 거버넌스 팀 신설</li>
+                                <li>AI 능숙도 기반 인력 재배치</li>
+                                <li>소규모팀의 놀라운 성과</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">⚖️</div>
+                            <h3>균형있는 성장</h3>
+                            <ul>
+                                <li>생산성 향상 vs 업무량 증가</li>
+                                <li>AI 활용 현실적 목표 설정 필요</li>
+                                <li>신뢰성 개선과 안전장치 강화</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Key Message -->
+            <section class="slide" id="slide-13">
+                <div class="slide-content center-content">
+                    <div class="key-message">
+                        <h2>2025년은 AI 에이전트의 해</h2>
+                        <p class="message-text">이 혁명적 변화에 능동적으로 대응하여,<br>AI와 함께 더 나은 미래를 만들어가는 개발자가 되시기 바랍니다.</p>
+                        <div class="final-thought">
+                            <p>AI는 도구일 뿐,<br><strong>진정한 가치는 여전히 인간의 창의성과 전문성에서 나옵니다.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 14: Thank You -->
+            <section class="slide" id="slide-14">
+                <div class="slide-content center-content">
+                    <h1 class="thank-you">감사합니다</h1>
+                    <p class="subtitle">AI와 함께 성장하는 개발자의 여정</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
